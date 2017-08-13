@@ -1,0 +1,38 @@
+h2 {
+	color: #B22222;
+	font-family: cursive;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: underline;
+    text-decoration-color: green;
+	word-spacing: 25px;
+	background-color: #F0E68C;
+}
+
+h4 {
+	margin-left:8px;
+}
+
+p {
+	margin-left:8px;
+)
+	
+.float-left {
+	float-left;
+	padding-left:2px;
+}
+
+.float-right {
+	float-right;
+	padding-right:2px;
+}
+
+
+
+
+ 
+
+	

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		<meta charset ="utf-8">
+		<title>Pizza Menu</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="./css/pizza_style.css">
+		<style>#totalPrice1{width:200px;height:200px;margin:auto;margin-top:0px;margin-right:40px;margin-bottom:0px;margin-left:0px;float:right;}.left{width:200px;height:200px;float:left;}
+		.right{width:200px;height:200px;float:right;}#showText1{width:200px;height:200px;margin-top:12px;margin-right:0px;margin-bottom:0px;margin-left:0px;float:left;} #showText2{width:200;height:200px;margin:0px;float:right;}
+		#cart{top:0;margin:0px auto;width:400px;height:200px;}#btnOrder{margin:10px 0px 0px 100px;width:150px;height:40px}
+		#btnCancel{margin:10px 0px 0px 100px;width:150px;height:40px}</style>
+		<script type="text/javascript" src="script.js"></script>
+
+	
+</head>
+	
+	<body>
+	
+	
+		<div class="menu">
+			<h2 class="display-2">Pizza Menu
+			    <img class="float-left" src="./img/pexels-photo-511440.jpeg" alt="picture of a pizza"/>
+				<img class="float-right" src="./img/vegetables-italian-pizza-restaurant.jpg" alt="picture of a pizza"/>
+			</h2>
+		</div>
+	</div>
+<!--- Menu with order selection buttons --->	
+	<form action="#" method="post" class="menu" id="pizzaMenu">
+    <fieldset>
+	
+<!-- Select radio buttons for size. -->	
+	<h4>Pizza Sizes</h4>
+		<!-- <p>Personal $6.00, Medium $10.00, Large $14.00, and Extra Large $16.00.<span>&nbsp(These are the base prices.)</span><br><br> -->
+			 &nbsp Select a Size:<span>&nbsp 
+			<label><input type="radio" class="size" name="Size"  value="Personal Pizza" /> Personal</label>
+			<label><input type="radio" class="size" name="Size" value="Medium Pizza" checked="checked" /> Medium</label>
+			<label><input type="radio" class="size" name="Size" value="Large Pizza" /> Large</label>
+			<label><input type="radio" class="size" name="Size" value="Extra Large Pizza" /> Extra Large</label>
+			<!--<input type="hidden" name="tops_tot" value="0.00" /> -->
+			</span><br>
+			&nbsp Personal $6.00, Medium $10.00, Large $14.00, and Extra Large $16.00.&nbsp(These are the base prices.)
+		</p>
+<!-- End Size --->
+	
+<!-- Select check boxes for meat varieties --->	
+	
+	<h4>Meat Varieties</h4>
+		<!--<p>Pepperoni, Sausage, Candian Bacon, Ground Beef, Anchovy, and Chicken.<br>
+				<span>(First meat item is complimentary. Each extra meat item is an additional $1.00 beyond the base price.)</span><br> -->
+			<p id="meat_varieties">&nbsp Select Meat Options:<span>&nbsp
+				<label><input type="checkbox" class="meats" name="Meat" value="Pepperoni" />Pepperoni</label>
+				<label><input type="checkbox" class="meats" name="Meat" value="Sausage"/>Sausage</label>
+				<label><input type="checkbox" class="meats" name="Meat" value="Candaian bacon"/>Canadian Bacon</label>
+				<label><input type="checkbox" class="meats" name="Meat" value="Ground Beef"/>Ground Beef</label>
+				<label><input type="checkbox" class="meats" name="Meat" value="Anchovy"/>Anchovy</label>
+				<label><input type="checkbox" class="meats" name="Meat" value="Chicken"/>Chicken</label>
+				</span><br>
+				&nbsp (First meat item is complimentary. Each extra meat item is an additional $1.00 beyond the base price.)
+			</p>	
+		</p>		
+				
+<!-- End Meat Varieties -->
+
+<!-- Radio buttons for Cheese Options -->
+	<h4> Cheese Varieties </h4>
+		<p> <!--Regular, No Cheese, Extra Cheese.<br>
+			<span>(Extra Cheese is an additional $3.00 for any size pizza.)</span><br><br> --->
+			&nbsp Select a Cheese Option:
+			<span>&nbsp
+			<label><input type="radio" class="cheese" name="Cheese" value="Regular Cheese"/>Regular Cheese</label>
+			<label><input type="radio" class="cheese" name="Cheese" value="No Cheese" checked="checked"/>No Cheese</label>
+			<label><input type="radio" class="cheese" name="Cheese" value="Extra Cheese"/>Extra Cheese</label>
+			</span><br>
+			&nbsp (Extra Cheese is an additional $3.00 for any size pizza.)
+		</p>
+		
+	
+<!-- End Cheese Options --> 
+
+<!-- Radio Buttons for Crust Options -->
+	
+	<h4> Types of Crusts </h4>
+		<p>&nbsp Select a Crust:
+			<span>&nbsp
+				<label><input type="radio" class="crust" name="Crust" value ="Plain Crust"/>Plain</label>
+				<label><input type="radio" class="crust" name="Crust" checked="Checked" value="Garlic Butter Crust"/>Garlic Butter</label>
+				<label><input type="radio" class="crust" name="Crust" value="Cheese Stuffed Crust"/>Cheese Stuffed</label>
+				<label><input type="radio" class="crust" name="Crust" value="Spicy Crust"/>Spicy </label>
+				<label><input type="radio" class="crust" name="Crust" value="House Special Crust"/>House Special</label>
+			</span>
+		</p>
+<!--End Crust Options-->
+	
+<!-- Radio Buttons for Sauces -->
+	
+	<h4> Sauces </h4>
+		<p> &nbsp Select a Sauce:
+			<span>&nbsp
+				<label><input type="radio" class="sauce" name="Sauce" value="Marinara Sauce"/>Marinara</label>
+				<label><input type="radio" class="sauce" name="Sauce" value="White Sauce" checked="checked" />White</label>
+				<label><input type="radio" class="sauce" name="Sauce" value="Barbecue Sauce"/>Barbecue</label>
+				<label><input type="radio" class="sauce" name="Sauce" value="No Sauce"/>No Sauce</label></span>		
+		</p>
+<!-- End sauces --->
+
+<!-- Check Boxes for Veggies -->
+	
+	
+	<h4> Veggies </h4>
+		<p id="veggies">&nbsp Select Veggie Options:<span>&nbsp
+				<label><input type="checkbox" class="veggies" name="Veggies" value="Tomatoes"/>Tomatoes</label>
+				<label><input type="checkbox" class="veggies" name="Veggies" value="Onions"/>Onions</label>
+				<label><input type="checkbox" class="veggies" name="Veggies" value="Olives"/>Olives</label>
+				<label><input type="checkbox" class="veggies" name="Veggies" value="Green Peppers"/>Green Peppers</label>
+				<label><input type="checkbox" class="veggies" name="Veggies" value="Mushrooms"/>Mushrooms</label>
+				<label><input type="checkbox" class="veggies" name="Veggies" value="Pineapple"/>Pineapple</label>
+				<label><input type="checkbox" class="veggies" name="Veggies" value="Spinach"/>Spinach</label>
+				<label><input type="checkbox" class="veggies" name="Veggies" value="Jalapeno"/>Jalapeno</label>
+				<input type="hidden" name="tops_tot" value="0.00" />
+			</span><br>	
+			&nbsp (First veggie item is complimentary. Each additional veggie item beyond the first is an additional $1.00.)
+		</p>
+<!-- End Veggies -->
+			
+	</fieldset>
+	</form>
+<!-- End Menu with Order Selection Buttons -->
+
+<!-- Submit Order and Cancel Buttons --->
+		<h6><br><br>
+		
+			<input id="btnOrder" type="button" onclick="getReceipt()" value="Submit Order" class="btn btn-outline-success" data-toggle="modal">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon">
+			</button></span><br>
+				
+			<input id="btnCancel" type="button" onclick="clearAll()" value="Cancel" class="btn btn-outline-success" data-toggle="modal">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon">
+			</button></span>
+			
+			
+<!-- End Order and Cancel Buttons -->
+		
+<!-- HTML cart order, subtotal, and total section--->				
+		
+		<div id= "cart">
+			
+			<div id="showText1"></div>
+			<div id="showText2"></div>
+			<div id="totalPrice1"></div>
+			 
+			
+		</div>
+	</h6>
+		
+<!--- End  HTML for cart---->		
+	
+
+<!-- JavaScript code order list with receipt and total price--->
+	
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>.
+	    <script src="./final_drill_basic.js"></script>
+	</body>
+</html>
+		
+	
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
